@@ -11,17 +11,37 @@
       "title": "從單機服務到叢集：Kubernetes 解決的問題與責任邊界",
       "track": "core",
       "prerequisites": [],
-      "status": "planned",
+      "status": "blocked",
       "lab_path": "lessons/k082",
       "article_path": null,
       "article_url": null,
-      "lab_commit": null,
+      "lab_commit": "2ede086f54842adac5a973b77c94444896a5df4d",
       "publication_commit": null,
-      "experiment_status": "not_started",
+      "experiment_status": "partial",
       "build_status": "not_started",
       "deploy_status": "not_started",
       "public_verification": "not_started",
-      "blockers": []
+      "blockers": [
+        "本執行環境沒有 Docker/Podman/nerdctl/containerd、kind、kubectl 或 daemon socket，CapEff/CapBnd 均為 0；沒有嘗試提權或使用既有外部叢集。必要 Kubernetes 正常／故障／清理實驗尚未實跑。",
+        "Python 基底映像 digest 尚未取得與審核；容器映像未建置。",
+        "網站公開長文尚未建立或提交，build/deploy/public content 與文章圖檔公開驗證尚未開始。"
+      ],
+      "source_status": "verified",
+      "validation": {
+        "run_id": "20261015T1111Z",
+        "raw_path": "lessons/k082/runs/20261015T1111Z/commands.jsonl",
+        "provenance_path": "lessons/k082/runs/20261015T1111Z/provenance.json",
+        "offline_http_and_manifest_tests": 9,
+        "shell_guard_fixture_tests": 3,
+        "offline_result": "passed",
+        "real_cluster_result": "not_run",
+        "source_readback": {
+          "status": "verified",
+          "commit": "2ede086f54842adac5a973b77c94444896a5df4d",
+          "file_count": 26
+        },
+        "diagram_review": "light_dark_rendered_and_visually_checked"
+      }
     },
     {
       "unit": 2,
@@ -1022,6 +1042,32 @@
       "original_url": "https://rightson.github.io/distributed-systems/2026/10/01/linux-program-process-thread-lifecycle.html",
       "experiments": "archive/k001",
       "note": "歷史實驗與發布已驗證；不計入 K082–K129 完成，也不重新執行同一排定時段"
+    },
+    {
+      "key": "k8s-hpc|K082|20261015T1111Z",
+      "unit_id": "K082",
+      "date": "2026-10-15",
+      "status": "lab_source_verified_cluster_experiments_blocked",
+      "instruction_commits": {
+        "website": "14d450c5033eff88fd0493729913c9e68cbf2da9",
+        "lab": "0e0dfa54b9b488d4497ab9b1528badf4596501ea"
+      },
+      "lab_commit": "2ede086f54842adac5a973b77c94444896a5df4d",
+      "lab_source_readback": "26 files exact content and blob SHA matched",
+      "experiment_status": "partial",
+      "offline_tests": {
+        "http_and_manifest": 9,
+        "guard_fixtures": 3,
+        "result": "passed"
+      },
+      "run_path": "lessons/k082/runs/20261015T1111Z",
+      "article_path": null,
+      "publication_commit": null,
+      "build_status": "not_started",
+      "deploy_status": "not_started",
+      "public_verification": "not_started",
+      "next_unit": "K082",
+      "note": "Created original K082 lesson, exercises/solutions, API, manifests, isolated guarded runbook and raw offline evidence. No live Kubernetes results or public article claimed; legacy archive preserved."
     }
   ]
 }
