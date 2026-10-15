@@ -15,7 +15,7 @@
       "lab_path": "lessons/k082",
       "article_path": null,
       "article_url": null,
-      "lab_commit": "2ede086f54842adac5a973b77c94444896a5df4d",
+      "lab_commit": "0ce377a474580b081ec2fb47b78102dfc3808d02",
       "publication_commit": null,
       "experiment_status": "partial",
       "build_status": "not_started",
@@ -37,8 +37,9 @@
         "real_cluster_result": "not_run",
         "source_readback": {
           "status": "verified",
-          "commit": "2ede086f54842adac5a973b77c94444896a5df4d",
-          "file_count": 26
+          "commit": "0ce377a474580b081ec2fb47b78102dfc3808d02",
+          "file_count": 26,
+          "method": "26 files read at initial source commit; one subsequent diagram-text correction exact-content/blob readback; other source blobs inherited unchanged"
         },
         "diagram_review": "light_dark_rendered_and_visually_checked"
       }
@@ -1068,6 +1069,15 @@
       "public_verification": "not_started",
       "next_unit": "K082",
       "note": "Created original K082 lesson, exercises/solutions, API, manifests, isolated guarded runbook and raw offline evidence. No live Kubernetes results or public article claimed; legacy archive preserved."
+    },
+    {
+      "key": "k8s-hpc|K082|20261015T1111Z|diagram-scope-correction",
+      "unit_id": "K082",
+      "status": "source_correction_verified_experiments_still_blocked",
+      "source_commit": "0ce377a474580b081ec2fb47b78102dfc3808d02",
+      "changed_path": "lessons/k082/assets/identity-changes.svg",
+      "verification": "exact content and blob SHA matched after commit",
+      "note": "Diagram now states volatile process state starts over; it does not imply persistent volumes or all business data disappear. Unit remains blocked/partial; no website publication or next-unit advancement."
     }
   ]
 }
