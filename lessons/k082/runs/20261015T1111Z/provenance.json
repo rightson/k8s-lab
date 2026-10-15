@@ -1,0 +1,29 @@
+{
+  "unit": "K082",
+  "run_id": "20261015T1111Z",
+  "instruction_commits": {
+    "website": "14d450c5033eff88fd0493729913c9e68cbf2da9",
+    "lab": "0e0dfa54b9b488d4497ab9b1528badf4596501ea"
+  },
+  "primary_sources_checked_date": "2026-10-15",
+  "kind_release": {
+    "tag": "v0.33.0",
+    "published_at": "2026-08-26T21:58:46Z",
+    "url": "https://github.com/kubernetes-sigs/kind/releases/tag/v0.33.0",
+    "node_image": "kindest/node:v1.37.0@sha256:a1ed56cfb0e7b93589bdf97c8cd566405a265939e3620fc4f5de89adff580ae5"
+  },
+  "actual_validation": {
+    "python_http_and_manifest_tests": 9,
+    "shell_guard_fixture_tests": 3,
+    "bash_syntax": "passed",
+    "svg_light_dark_render_and_visual_review": "passed",
+    "real_kubernetes_experiments": "not_run_blocked",
+    "container_image_build": "not_run_base_digest_and_runtime_missing",
+    "website_publication": "not_started"
+  },
+  "limits": [
+    "Fixture tests exercise guard rejection only, not a real Kubernetes API or permissions model.",
+    "PyYAML field checks are not Kubernetes server-side schema/admission validation.",
+    "No host, GPU, NUMA or networking benchmark was executed."
+  ]
+}

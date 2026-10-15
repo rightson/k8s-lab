@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 870" role="img" aria-labelledby="title desc">
+<title id="title">Two-replica API system model</title><desc id="desc">Desired objects are stored by the API server. Controllers and scheduler drive Pods on workers. Client service traffic uses ready endpoints.</desc>
+<rect width="640" height="870" fill="#ffffff"/>
+<g font-family="sans-serif" fill="#182838" text-anchor="middle">
+<text x="320" y="42" font-size="26">Two replicas, two different paths</text>
+<rect x="70" y="70" width="500" height="85" rx="12" fill="#e8f1ff" stroke="#32649a"/>
+<text x="320" y="104" font-size="23">Desired state</text><text x="320" y="136" font-size="20">Deployment: replicas = 2 / Service selector</text>
+<path d="M320 155v32" stroke="#32649a" stroke-width="3"/>
+<rect x="70" y="187" width="500" height="115" rx="12" fill="#e8f1ff" stroke="#32649a"/>
+<text x="320" y="221" font-size="23">Control plane</text><text x="320" y="255" font-size="20">API server + etcd</text><text x="320" y="284" font-size="20">Controllers + scheduler</text>
+<path d="M210 302v42M430 302v42" stroke="#32649a" stroke-width="3"/>
+<rect x="35" y="344" width="275" height="162" rx="12" fill="#ecf7ee" stroke="#287449"/>
+<rect x="330" y="344" width="275" height="162" rx="12" fill="#ecf7ee" stroke="#287449"/>
+<text x="172" y="378" font-size="23">Worker 1</text><text x="172" y="412" font-size="20">kubelet + runtime</text><text x="172" y="447" font-size="22">Pod A / API</text><text x="172" y="480" font-size="20">Ready?</text>
+<text x="468" y="378" font-size="23">Worker 2</text><text x="468" y="412" font-size="20">kubelet + runtime</text><text x="468" y="447" font-size="22">Pod B / API</text><text x="468" y="480" font-size="20">Ready?</text>
+<path d="M172 506v35h296v-35M320 541v38" stroke="#287449" stroke-width="3" fill="none"/>
+<rect x="70" y="579" width="500" height="95" rx="12" fill="#fff2dc" stroke="#a36d1c"/>
+<text x="320" y="614" font-size="23">Service data plane</text><text x="320" y="650" font-size="20">Uses ready endpoints from EndpointSlices</text>
+<path d="M320 674v40" stroke="#a36d1c" stroke-width="3"/>
+<rect x="150" y="714" width="340" height="65" rx="12" fill="#fff2dc" stroke="#a36d1c"/>
+<text x="320" y="755" font-size="23">In-cluster HTTP client</text>
+<text x="320" y="817" font-size="18">kind nodes share one host; no host-level HA</text>
+<text x="617" y="852" text-anchor="end" font-size="10">Scott Yo-Ru Chen · 2026-10-15</text>
+</g><style>/* auto dark mode */@media (prefers-color-scheme: dark){svg:not([fill]){fill:#e4e6e7}[fill="#182838" i]{fill:#ced8e1}[fill="#e8f1ff" i]{fill:#142034}[fill="#ecf7ee" i]{fill:#1e2b20}[fill="#fff2dc" i]{fill:#382b15}[fill="#ffffff" i]{fill:#1b1f20}[stroke="#287449" i]{stroke:#60c88d}[stroke="#32649a" i]{stroke:#78a4d3}[stroke="#a36d1c" i]{stroke:#e3ad5c}}</style>
+</svg>
+
